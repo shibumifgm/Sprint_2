@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "open-sans";
+  src: url("/style/fonts/OpenSans.woff");
+}
+
+@font-face {
+  font-family: "open-bold";
+  src: url("/style/fonts/OpenSans-bold.woff");
+}
+
+@font-face {
+  font-family: "open-light";
+  src: url("/style/fonts/OpenSans-light.woff");
+}
+
+@font-face {
+  font-family: "open-semibold";
+  src: url("/style/fonts/OpenSans-semibold.woff");
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo {
+  width: 59px;
+  height: 59px;
+  margin-left: 168px;
+  margin-top: 18px;
+}
+
+header nav {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+  margin-right: 156px;
+  margin-top: 20px;
+}
+
+header nav li {
+  margin: 10px 20px;
+  font-size: 13px;
+  color: #572ee5;
+  letter-spacing: 0;
+  text-align: center;
+  font-family: "open-bold";
+}
+
+header nav img {
+  height: 54px;
+  width: 54px;
+}
+
+.div1 {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.div1 h1 {
+  margin: auto;
+  margin-top: 76px;
+  text-align: center;
+  font-family: "open-bold";
+  font-size: 35px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 50px;
+}
+
+.div1 h1 .gifos {
+  color: #50E3C2;
+  font-size: 40px;
+}
+
+.div1 img {
+  display: block;
+  margin: auto;
+}
+
+.div1 .buscador {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  margin: auto;
+  background: #FFFFFF;
+  border: 1px solid #572EE5;
+  border-radius: 27px;
+  border-radius: 27px;
+  width: 550px;
+  height: 55px;
+  text-indent: 54px;
+}
+
+.div1 .buscar {
+  border: 15px;
+  width: 540px;
+  height: 40px;
+  position: relative;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.div1 .imagen_buscar {
+  width: 20px;
+  height: 20px;
+  border: 0px;
+  position: relative;
+  top: 15px;
+  right: 15px;
+}
+
+.div1 h2 {
+  font-family: "open-bold";
+  font-size: 18px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 25px;
+  margin-top: 73px;
+}
+
+.div1 p {
+  font-family: "open-semibold";
+  font-size: 16px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 25px;
+  margin-top: 30px;
+}
+/*# sourceMappingURL=style.css.map */

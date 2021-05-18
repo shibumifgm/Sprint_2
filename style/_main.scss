@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+  font-family: "open-sans";
+  src: url("/style/fonts/OpenSans.woff");
+}@font-face {
+  font-family: "open-bold";
+  src: url("/style/fonts/OpenSans-bold.woff");
+}@font-face {
+  font-family: "open-light";
+  src: url("/style/fonts/OpenSans-light.woff");
+}@font-face {
+  font-family: "open-semibold";
+  src: url("/style/fonts/OpenSans-semibold.woff");
+}
