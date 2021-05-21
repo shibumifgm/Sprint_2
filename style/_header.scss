@@ -2,14 +2,16 @@ header {
   display: flex;
   position: sticky;
   justify-content: space-between;
+  
   .logo {
     width: 59px;
     height: 59px;
     margin-left: 168px;
     margin-top: 18px;
   }
+ 
 
-  nav {
+  nav ul {
     display: inline-flex;
     list-style: none;
     margin-right: 156px;
@@ -17,6 +19,7 @@ header {
     a{
       text-decoration: none;
     }
+    
     
 
     li {
@@ -34,5 +37,36 @@ header {
       width: 54px;
     }
   }
+  #open  {
+    margin: 50px 26px ;
+   // justify-self: flex-end;
+    width: 15px;
+    height: 15px;
+    display: none;
+  }
+  #close{
+    margin: 50px 26px ;
+    width: 15px;
+    height: 15px;
+
+  }
   
 }
+
+
+@media screen and (max-width: 800px) {
+ header #open {
+    
+    display: block;
+  }
+  nav{
+    display: none;
+  }
+ header .logo {
+    margin-left: 22px;
+    margin-top: 29px;
+  }
+
+
+    
+  }

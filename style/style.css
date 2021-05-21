@@ -1,8 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 @font-face {
@@ -43,7 +41,7 @@ header .logo {
   margin-top: 18px;
 }
 
-header nav {
+header nav ul {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -52,11 +50,11 @@ header nav {
   margin-top: 20px;
 }
 
-header nav a {
+header nav ul a {
   text-decoration: none;
 }
 
-header nav li {
+header nav ul li {
   margin: 10px 20px;
   font-size: 13px;
   color: #572ee5;
@@ -65,19 +63,38 @@ header nav li {
   font-family: "open-bold";
 }
 
-header nav img {
+header nav ul img {
   height: 54px;
   width: 54px;
 }
 
-.div1 {
-  display: block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+header #open {
+  margin: 50px 26px;
+  width: 15px;
+  height: 15px;
+  display: none;
 }
 
-.div1 h1 {
+header #close {
+  margin: 50px 26px;
+  width: 15px;
+  height: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  header #open {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+  header .logo {
+    margin-left: 22px;
+    margin-top: 29px;
+  }
+}
+
+h1 {
   margin: auto;
   margin-top: 76px;
   text-align: center;
@@ -88,17 +105,17 @@ header nav img {
   line-height: 50px;
 }
 
-.div1 h1 .gifos {
+h1 .gifos {
   color: #50E3C2;
   font-size: 40px;
 }
 
-.div1 img {
+.ilustracion {
   display: block;
   margin: auto;
 }
 
-.div1 .buscador {
+.buscador {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,16 +130,15 @@ header nav img {
   text-indent: 54px;
 }
 
-.div1 .buscar {
-  border: 15px;
+.buscar {
+  border: none;
   width: 540px;
   height: 40px;
   position: relative;
-  margin-left: 10px;
-  margin-top: 5px;
+  margin: 5px 10px;
 }
 
-.div1 .imagen_buscar {
+.imagen_buscar {
   width: 20px;
   height: 20px;
   border: 0px;
@@ -131,7 +147,7 @@ header nav img {
   right: 15px;
 }
 
-.div1 h2 {
+h2 {
   font-family: "open-bold";
   font-size: 18px;
   color: #572EE5;
@@ -140,12 +156,21 @@ header nav img {
   margin-top: 73px;
 }
 
-.div1 p {
+p {
   font-family: "open-semibold";
   font-size: 16px;
   color: #572EE5;
   text-align: center;
   line-height: 25px;
   margin-top: 30px;
+}
+
+@media screen and (min-width: 800px) {
+  #br1 {
+    display: none;
+  }
+  p #br3 {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

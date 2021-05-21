@@ -8,26 +8,31 @@
     <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="/imagenes/logo-mobile.svg" alt="" class="logo"></a>
-        <nav>
-            <li>MODO DIURNO</li>
-            <a href="../favoritos.html"><li>  FAVORITOS</li></a> 
-           <a href="/misgifos.html"> <li>MIS GIFOS</li></a>
-            <a href="/creatugifo.html"><img src="/imagenes/button-crear-gifo.svg" alt="" srcset=""></a>
+    <header id="header">
+        <a id="logo" href="index.html"><img src="/imagenes/logo-mobile.svg" alt="" class="logo"></a>
+        <nav class="navbar" id="navbar">
+            <ul id="ul">
+                <li>MODO DIURNO</li>
+                <a href="../favoritos.html"><li>  FAVORITOS</li></a> 
+                <a href="/misgifos.html"> <li>MIS GIFOS</li></a>
+                <a href="/creatugifo.html"><img src="/imagenes/button-crear-gifo.svg" alt="" srcset=""></a>
+            </ul>
         </nav>
-    </header>
+        <img src="/imagenes/burger.svg" alt="" srcset="" id="open">
+    </header >
     <div class="div1">
-        <h1> Inspírate, busca, guarda, y crea <br> los mejores <span class="gifos">GIFOS</span></h1>
-        <img src="/imagenes/ilustra_header.svg" alt="" srcset="">
+        <h1> Inspírate, busca,<br id="br1"> guarda, y crea <br id="br2"> 
+            los  mejores <span class="gifos">GIFOS</span></h1>
+        <img src="/imagenes/ilustra_header.svg" alt="" srcset="" class="ilustracion">
         <div class="buscador">
             <input  class="buscar" type="text" name="buscar" id="buscador"  placeholder="Busca GIFOS y mas">
             <input type="image" src="/imagenes/icon-search.svg" class="imagen_buscar">
         </div>
         <h2>Trending</h2>
-        <p>Reactions, Entertainment, Sports, Stickers, Artists</p>
+        <p>Reactions, Entertainment,<br id="br3"> Sports, Stickers, Artists</p>
     </div>
     
 </body>
-<script src="./index.js"></script>
+<script src="index.js"></script>
 </html>
+

@@ -1,7 +1,5 @@
-.div1{
-    display: block;
-    justify-content: center;
-    h1{
+h1{
+    
         margin: auto;
         margin-top: 76px;
         text-align: center;
@@ -10,13 +8,14 @@
         color: #572EE5;
         text-align: center;
         line-height: 50px;
+        
         .gifos{          
             color: #50E3C2;
             font-size: 40px;
         }
        
     }
-    img{
+    .ilustracion{
         display: block;
         margin:auto;
     }
@@ -33,14 +32,14 @@
     height: 55px;
     text-indent: 54px;
 }
+// pendiente   quitar el  borde active con js 
 .buscar {
-	border: 15px;
+	border: none;
     width: 540px;
     height: 40px;
 	position: relative;
-    margin-left: 10px;
-    margin-top: 5px;
-	
+    margin: 5px 10px
+    
 	
 }
 .imagen_buscar {
@@ -68,6 +67,16 @@
         text-align: center;
         line-height: 25px;
         margin-top: 30px;
+       
     }
-   
+
+    @media screen and (min-width: 800px){
+         #br1    {
+           display: none;
+              
+   }
+   p #br3 {
+       display: none;
+   }
+
 }
