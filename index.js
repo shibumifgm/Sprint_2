@@ -1,15 +1,24 @@
-// hover de la imagen crea tu gifo por cambio de imagen 
-let creatugifo = document.getElementById("creatugifo")
-let imagenHover = new Image(); 
-imagenHover.src = "./imagenes/CTA-crear-gifo-hover.svg"
+// hover de la imagen crea tu gifo por cambio de imagen
+let creatugifo = document.getElementById("creatugifo");
+let imagenHover = new Image();
+imagenHover.src = "./imagenes/CTA-crear-gifo-hover.svg";
+let imagenNormal = creatugifo.firstElementChild;
+let cambio = () => creatugifo.replaceChild(imagenHover, imagenNormal);
+let cambio2 = () => creatugifo.replaceChild(imagenNormal, imagenHover);
+creatugifo.addEventListener("mouseenter", cambio);
+creatugifo.addEventListener("mouseleave", cambio2);
 
-imagenNormal = creatugifo.firstElementChild
+// modo nocturno
+let modonocturno = () => {
+  body = document.getElementById("body");
+  console.log(body);
+  body.style.background = "black";
+  nocturno.innerText = "Modo Nocturo";
+};
 
-
-let cambio = ()=> creatugifo.replaceChild(imagenHover,imagenNormal)
-let cambio2 = ()=> creatugifo.replaceChild(imagenNormal,imagenHover)
-creatugifo.addEventListener("mouseenter",cambio )
-creatugifo.addEventListener("mouseleave", cambio2)
+//let modo diurno =
+let nocturno = document.getElementById("modo_nocturno");
+nocturno.addEventListener("click", modonocturno);
 
 // let html = '  <img src="/imagenes/close.svg" alt="" srcset="" id="close"> '
 //  let header = document.getElementById("header");
@@ -28,7 +37,6 @@ creatugifo.addEventListener("mouseleave", cambio2)
 //  abrir.addEventListener("click" ,mostrarX )
 //  cerrar.addEventListener("click", mostrarY)
 //  let mostrarY = ()=> { header.replaceChild(abrir,cerrar) }
-
 
 // //      let menuHamburgesa = document.createElement("img")
 // //  menuHamburgesa.setAttribute("id","menuHamburguesa")
