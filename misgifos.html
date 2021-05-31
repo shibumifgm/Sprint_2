@@ -8,18 +8,37 @@
     <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="/imagenes/logo-mobile.svg" alt="" class="logo"></a>
-        <nav>
-            <ul>
-            <li>MODO NOCTURNO</li>
-            <a href="../favoritos.html"><li>  FAVORITOS</li></a> 
-           <a href="/misgifos.html"> <li>MIS GIFOS</li></a>
-            <a class="creatugifo" href="/creatugifo.html"><img src="/imagenes/button-crear-gifo.svg" alt="" srcset=""></a>
-        </ul>
+    <header id="header">
+        <a id="logo" href="index.html"><img src="/imagenes/logo-mobile.svg" alt="" class="logo"></a>
+        <nav class="navbar" id="navbar">
+            <ul id="ul">
+                <a class="modo_nocturno" id="modo_nocturno" shref="#"><li id ="modo_diurno">MODO NOCTURNO</li></a> 
+                <a href="/favoritos.html"><li>  FAVORITOS</li></a> 
+                <a href="/misgifos.html"> <li>MIS GIFOS</li></a>
+               <a class="creatugifo" id="creatugifo" href="/creatugifo.html"> <img src="/imagenes/button-crear-gifo.svg" alt="" srcset=""></a>
+            </ul>
         </nav>
-    </header>
+        <img src="/imagenes/burger.svg" alt="" srcset="" id="open">
+    </header >
+    <div id="divmisgifos">
+        <img src="/imagenes/icon-mis-gifos.svg" alt="" srcset="" id="icongifos">
+        <h1 class="titulos misgifos">Mis GIFOS</h1>
+    </div> 
+    <div id="gridmisgifos">
+        <p class="ps"></p>
+        <p class="ps"></p>
+        <p class="ps"></p>
+        <p class="ps"></p>
+        <p class="ps"></p>
+        <p class="ps"></p>
+        <p class="ps"></p>
+        <p class="ps"></p>
+      
+        
+    </div>
+    <button class="botonvermas">VER MAS</button>
+
     
 </body>
-<script src="index.js"></script>
+<script src="/index.js"></script>
 </html>

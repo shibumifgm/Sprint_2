@@ -12,3 +12,19 @@
   font-family: "open-semibold";
   src: url("/style/fonts/OpenSans-semibold.woff");
 }
+%botones{
+    
+  margin:70px auto 5px;
+      display: flex;
+      justify-content: center;
+      border: 1px solid #572EE5;
+      width: 127px;
+      height: 50px;
+      border-radius: 25px;
+      align-items: center;
+      font-family: "open-bold";
+      font-size: 13px;
+      color: #572EE5;
+      letter-spacing: 0;
+      text-align: center;
+  }
