@@ -89,7 +89,6 @@ header ul {
   display: -ms-inline-flexbox;
   display: inline-flex;
   list-style: none;
-  margin-right: 156px;
   top: 20px;
   width: 100%;
   -webkit-box-pack: end;
@@ -116,16 +115,16 @@ header ul li {
 }
 
 header #open {
-  margin: 50px 26px;
   width: 15px;
   height: 15px;
   display: none;
 }
 
 header #close {
-  margin: 50px 26px;
-  width: 15px;
-  height: 15px;
+  position: absolute;
+  right: 26px;
+  top: 47px;
+  display: block;
 }
 
 .creatugifo {
@@ -137,20 +136,23 @@ header #close {
     display: fixed;
   }
   header #open {
+    position: absolute;
+    right: 26px;
+    top: 47px;
     display: block;
   }
   header .logo {
     margin-left: 22px;
-    margin-top: 16px;
+    margin-top: 29px;
     width: 49px;
     height: 49px;
-    position: relative;
+    position: absolute;
   }
   header nav ul {
+    display: none;
     top: 90px;
     right: 0;
     left: 0;
-    display: inline-block;
     z-index: 999;
     position: relative;
     background: rgba(87, 46, 229, 0.9);

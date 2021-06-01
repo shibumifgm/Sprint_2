@@ -6,7 +6,7 @@ imagenHover.src = "./imagenes/CTA-crear-gifo-hover.svg";
 let imagenNormal = creatugifo.firstElementChild;
 let imagen3= new Image ();
 imagen3.src = "./imagenes/CTA-crear-gifo-active.svg"
-console.log(imagen3)
+
 let cambio = () => creatugifo.replaceChild(imagenHover, imagenNormal);
 let cambio2 = () => creatugifo.replaceChild(imagenNormal, imagenHover);
 
@@ -103,12 +103,40 @@ let mododiurno = ()=>{
 
 // // menu hamborguesaaaaaaa
 
+  let abrir = document.getElementById("open")
+  let cerrar= new Image ();
+cerrar.src = "./imagenes/close.svg"
+cerrar.setAttribute("id","close")
+   let header = document.getElementById("header")
+  
 
-// // let diurno = document.getElementById("diurno")
-// // diurno.addEventListener("click", mododiurno);
 
+let openmenu = ()=>  {
+  if (window.matchMedia("(max-width: 600px)").matches = true)
+   {
+  ul = document.getElementById("ul")
+  ul.style.display = "inline-block";  
+  
+  header.replaceChild(cerrar, abrir)
+  abrir.removeEventListener("click",openmenu)
+  cerrar.addEventListener("click", closemenu)}
+else{
+  console.log(ul)
+}
+}
 
+let closemenu = ()=> {
+  ul = document.getElementById("ul")
+  ul.style.display = "none";
+  header.replaceChild( abrir, cerrar)
+  cerrar.removeEventListener("click",closemenu)
+  abrir.addEventListener("click", openmenu)
 
+}
+
+  abrir.addEventListener("click", openmenu)
+  cerrar.addEventListener("click", closemenu)
+  
 // // let html = '  <img src="/imagenes/close.svg" alt="" srcset="" id="close"> '
 // //  let header = document.getElementById("header");
 // //  //let logo = document.getElementById("logo")
@@ -120,8 +148,6 @@ let mododiurno = ()=>{
 // //      let abrir = document.getElementById("open")
 // //     header.replaceChild(cerrar,abrir)
 // // }
-// //   let abrir = document.getElementById("open")
-// //  let cerrar = document.getElementById("close")
 
 // //  abrir.addEventListener("click" ,mostrarX )
 // //  cerrar.addEventListener("click", mostrarY)
