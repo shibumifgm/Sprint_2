@@ -141,9 +141,17 @@ header #close {
     top: 47px;
     display: block;
   }
+  header a#logo {
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    top: 29px;
+    left: 22px;
+    z-index: 99;
+  }
   header .logo {
-    margin-left: 22px;
-    margin-top: 29px;
+    margin-left: 2px;
+    margin-top: 2px;
     width: 49px;
     height: 49px;
     position: absolute;
@@ -153,7 +161,6 @@ header #close {
     top: 90px;
     right: 0;
     left: 0;
-    z-index: 999;
     position: relative;
     background: rgba(87, 46, 229, 0.9);
     height: 100vh;
@@ -382,5 +389,20 @@ img#pelicula {
   border: 1px solid #572EE5;
   border-radius: 50%;
   margin: 10px;
+}
+
+.res {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+#contenedorderespuesta {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
 }
 /*# sourceMappingURL=style.css.map */

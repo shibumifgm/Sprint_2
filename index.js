@@ -54,7 +54,13 @@ let mododiurno = ()=>{
   lis = document.getElementsByTagName("li")
  for (let i = 0; i < lis.length; i++) {
    const li = lis[i];
-   li.style.color = '#572EE5';  
+   if ((window.matchMedia("(min-width: 800px)").matches )){
+
+     li.style.color = '#572EE5';  
+   }
+   else{
+    li.style.color = "white";
+   }
  }
   ps = document.getElementsByTagName("p")
  for (let i = 0; i < ps.length; i++) {
@@ -111,18 +117,19 @@ cerrar.setAttribute("id","close")
   
 
 
-let openmenu = ()=>  {
-  if (window.matchMedia("(max-width: 600px)").matches = true)
-   {
-  ul = document.getElementById("ul")
-  ul.style.display = "inline-block";  
-  
-  header.replaceChild(cerrar, abrir)
-  abrir.removeEventListener("click",openmenu)
-  cerrar.addEventListener("click", closemenu)}
-else{
-  console.log(ul)
-}
+let openmenu = () =>  {
+   while (window.matchMedia("(max-width: 800px)").matches ) {
+     
+     
+      //  console.log(window.matchMedia("(max-width: 800px)").matches)
+    ul = document.getElementById("ul")
+    ul.style.display = "inline-block";  
+    
+    header.replaceChild(cerrar, abrir)
+    abrir.removeEventListener("click",openmenu)
+    cerrar.addEventListener("click", closemenu)
+   }
+
 }
 
 let closemenu = ()=> {
@@ -136,40 +143,63 @@ let closemenu = ()=> {
 
   abrir.addEventListener("click", openmenu)
   cerrar.addEventListener("click", closemenu)
+
+
+  // conectarse a la  API
+
+  //https://api.giphy.com/v1/gifs/search?api_key=9q0Co8y92A1puokhTuMaeKeO3Y5bsveq&q=perro
+  //https://api.giphy.com/v1/gifs/search?api_key=9q0Co8y92A1puokhTuMaeKeO3Y5bsveq&limit=12&q=perro
   
-// // let html = '  <img src="/imagenes/close.svg" alt="" srcset="" id="close"> '
-// //  let header = document.getElementById("header");
-// //  //let logo = document.getElementById("logo")
-// //  let navbar = document.getElementById("navbar")
-// //  let ul = document.getElementById("ul")
-// //  let mostrarX = ( )  => {
-// //     header.innerHTML += html
-// //     let cerrar  = document.getElementById("close")
-// //      let abrir = document.getElementById("open")
-// //     header.replaceChild(cerrar,abrir)
-// // }
+let buscar = ()=> {
+ 
+  buscador = input.value // lo que busca el usuario
+  resultados.innerText = buscador
+ 
+ fetch(`${giphysearchurl}${api_key}&limit=12&q=${buscador}`) // pendiente sacar el &q a constante busqueda del buscador shaaaaa
+ .then ((res)=>  res.json()) 
+.then ((responses) => {
 
-// //  abrir.addEventListener("click" ,mostrarX )
-// //  cerrar.addEventListener("click", mostrarY)
-// //  let mostrarY = ()=> { header.replaceChild(abrir,cerrar) }
+  responses.data.forEach(response => {
+    url = response.images.downsized_medium.url
+    console.log(url)}
+  )
 
-// // //      let menuHamburgesa = document.createElement("img")
-// // //  menuHamburgesa.setAttribute("id","menuHamburguesa")
-// // // navbar.appendChild(menuHamburgesa)
-// // // navbar.replaceChild( menuHamburgesa,ul)
-// // // abrir = document.getElementById("open")
-// // // cerrar = document.getElementById("close")
-// // // navbar.replaceChild(cerrar,abrir)
-// // //  console.log(navbar)}
+  let espacios = document.getElementsByClassName("res")
+  for (let i = 0; i < espacios.length; i++) {
+    url = response.images.downsized_medium.url
+    espacio.setAttribute("src", url)
+    
+  }
+  // espacios.forEach(espacio => {
+  //   espacio.setAttribute("src", url)
+  // })
+  
+  
+  
+})
+.catch((err)  => console.log(err))
+}
 
-// // // menuHamburgesa.innerHTML = html
-// // // let abierto = document.getElementById("open")
-// // // abierto.style.display = "none"
-// // // let menu = document.getElementById("header")
-// // //logo.nextElementSibling.remove()
-// // // replaceWith
-// // // menuHamburgesa.innerHTML = html
+let resultados = document.getElementById("resultados")
+const api_key = "?api_key=9q0Co8y92A1puokhTuMaeKeO3Y5bsveq"
+ const giphysearchurl = "http://api.giphy.com/v1/gifs/search"
+ let input = document.getElementById("buscador")
+ let imagen_buscar = document.getElementById("imagen_buscar")
+ imagen_buscar.addEventListener("click", buscar)
+ 
+ 
 
-// // // with(menuHamburgesa) {
-// // //     replaceWith("foo");
-// // //   }
+// let template = ""
+// let busqueda = input.value
+
+
+//  fetch(`${giphysearchurl}${api_key}&q=perro`) // pendiente sacar el &q a constante busqueda del buscador
+//  .then ((res)=>  res.json())
+// .then ((search) => console.log (search))
+// .catch((err)  => console.log(err))
+
+
+
+// let primergif = fetch(`${giphysearchurl}/${api_key}&q:perro`)
+// console.log(primergif)
+
