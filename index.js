@@ -150,35 +150,42 @@ let closemenu = ()=> {
   //https://api.giphy.com/v1/gifs/search?api_key=9q0Co8y92A1puokhTuMaeKeO3Y5bsveq&q=perro
   //https://api.giphy.com/v1/gifs/search?api_key=9q0Co8y92A1puokhTuMaeKeO3Y5bsveq&limit=12&q=perro
   
-let buscar = ()=> {
+let buscar =  async()=> {
  
   buscador = input.value // lo que busca el usuario
   resultados.innerText = buscador
- 
- fetch(`${giphysearchurl}${api_key}&limit=12&q=${buscador}`) // pendiente sacar el &q a constante busqueda del buscador shaaaaa
+ try{
+ const res= await fetch(`${giphysearchurl}${api_key}&limit=12&q=${buscador}`) // pendiente sacar el &q a constante busqueda del buscador shaaaaa
  .then ((res)=>  res.json()) 
-.then ((responses) => {
-
-  responses.data.forEach(response => {
-    url = response.images.downsized_medium.url
-    console.log(url)}
-  )
-
-  let espacios = document.getElementsByClassName("res")
-  for (let i = 0; i < espacios.length; i++) {
-    url = response.images.downsized_medium.url
-    espacio.setAttribute("src", url)
-    
+.then ((responses) => { 
+  responses.data.forEach(function (item){
+    if (links.indexOf(item.images.downsized_medium.url)== -1)
+  {
+    links.push(item.images.downsized_medium.url)
   }
-  // espacios.forEach(espacio => {
-  //   espacio.setAttribute("src", url)
-  // })
-  
-  
-  
-})
-.catch((err)  => console.log(err))
 }
+
+)})}
+catch(error) {
+  console.error(error)
+}
+
+for (let i = 0; i < espacios2.length; i++) {
+  
+   espacios[i].setAttribute("src",links[i])
+  
+  
+}
+
+}
+
+
+
+let espacios = document.getElementsByClassName("res")
+let espacios2 = Array.from(espacios)
+
+
+let links = []
 
 let resultados = document.getElementById("resultados")
 const api_key = "?api_key=9q0Co8y92A1puokhTuMaeKeO3Y5bsveq"
